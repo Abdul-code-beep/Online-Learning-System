@@ -1,0 +1,159 @@
+﻿
+@{
+    ViewBag.Title = "Payment";
+}
+
+<style>
+    /* Global Styles */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7fc;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1.page-title {
+        text-align: center;
+        font-size: 36px;
+        color: #333;
+        margin: 40px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .payment-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+        .payment-table th, .payment-table td {
+            padding: 12px 20px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .payment-table th {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+        }
+
+        .payment-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .payment-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .payment-table td {
+            font-size: 16px;
+            color: #555;
+        }
+
+            .payment-table td:first-child {
+                font-weight: bold;
+            }
+
+            .payment-table td:last-child {
+                text-align: center;
+            }
+
+        .payment-table tfoot td {
+            font-weight: bold;
+            background-color: #f4f4f4;
+        }
+
+    media (max-width: 768px) {
+        .payment-table th, .payment-table td
+
+    {
+        padding: 8px 10px;
+    }
+
+    h1.page-title {
+        font-size: 28px;
+    }
+    }
+</style>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Payment Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Course Payments by Students</h1>
+
+        <!-- Course Payment Table -->
+        <table class="payment-table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Faculty</th>
+                    <th>Amount Paid</th>
+                    <th>Date of Payment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Arjun Patel</td>
+                    <td>Data Science 101</td>
+                    <td>Dr. Smith</td>
+                    <td>$300</td>
+                    <td>2025-02-18</td>
+                </tr>
+                <tr>
+                    <td>Ananya Gupta</td>
+                    <td>Web Development</td>
+                    <td>Prof. Johnson</td>
+                    <td>$250</td>
+                    <td>2025-02-19</td>
+                </tr>
+                <tr>
+                    <td>Amit Kumar</td>
+                    <td>Machine Learning</td>
+                    <td>Dr. Williams</td>
+                    <td>$350</td>
+                    <td>2025-02-20</td>
+                </tr>
+                <tr>
+                    <td>Priya Sharma</td>
+                    <td>Data Science 101</td>
+                    <td>Dr. Smith</td>
+                    <td>$300</td>
+                    <td>2025-02-21</td>
+                </tr>
+                <tr>
+                    <td>Ravi Reddy</td>
+                    <td>Web Development</td>
+                    <td>Prof. Johnson</td>
+                    <td>$250</td>
+                    <td>2025-02-22</td>
+                </tr>
+                <tr>
+                    <td>Neha Verma</td>
+                    <td>Machine Learning</td>
+                    <td>Dr. Williams</td>
+                    <td>$350</td>
+                    <td>2025-02-23</td>
+                </tr>
+                <!-- More rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "AdminCourses";
+}
+
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Heading Styles */
+h1 {
+    color: #333;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Course Details Container */
+#courseDetails {
+    background: white;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Paragraph Styles */
+#courseDetails p {
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    width: 100%;
+    padding: 5px 0;
+}
+
+/* Buttons */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 80%;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Approve Button */
+button:nth-child(6) {
+    background-color: #28a745;
+}
+
+button:nth-child(6):hover {
+    background-color: #218838;
+}
+
+/* Reject Button */
+button:nth-child(7) {
+    background-color: #dc3545;
+}
+
+button:nth-child(7):hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+media (max-width: 480px) {
+    #courseDetails {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+    }
+}
+
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <script>
+        function displayCourseDetails() {
+            const storedDetails = localStorage.getItem("courseDetails");
+            if (storedDetails) {
+                const courseDetails = JSON.parse(storedDetails); // Parse JSON string back to object
+                // Display the details on the page (example)
+                const detailsDiv = document.getElementById("courseDetails");
+                detailsDiv.innerHTML = `
+                    <p>Course Name: ${courseDetails.courseName}</p>
+                    <p>Fees: ${courseDetails.fees}</p>
+                    <p>Duration: ${courseDetails.duration}</p>
+                    <p>Date: ${courseDetails.date}</p>
+                    <p>Faculty Name: ${courseDetails.facultyName}</p>
+                    <button onclick="approveCourse()">Approve</button>
+                    <button onclick="rejectCourse()">Reject</button>
+                `;
+            } else {
+                alert("No course details found.");
+            }
+        }
+
+        function approveCourse() {
+            // Implement approval logic here (e.g., store approved status)
+            alert("Course approved!");
+        }
+
+        function rejectCourse() {
+            // Implement rejection logic here
+            alert("Course rejected!");
+        }
+
+        window.onload = displayCourseDetails; // Call when the page loads
+    </script>
+</head>
+<body>
+    <h1>Course Approval</h1>
+    <div id="courseDetails"></div>
+</body>
+</html>

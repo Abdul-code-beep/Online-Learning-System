@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Notices";
+}
+
+<h2>Notices</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notices - Student Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .notice-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+            .notice-card h3 {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+
+            .notice-card .date {
+                font-size: 0.9em;
+                color: #777;
+                margin-bottom: 10px;
+            }
+
+            .notice-card p {
+                font-size: 1.1em;
+                color: #333;
+            }
+
+            .notice-card .important {
+                font-weight: bold;
+                color: #FF5722;
+            }
+
+            .notice-card .important-notice {
+                background-color: #FFEBEE;
+                padding: 10px;
+                border-left: 5px solid #f44336;
+                margin-top: 15px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Notices</h1>
+
+        <!-- Notice 1 -->
+        <div class="notice-card">
+            <h3>Upcoming Exam Date</h3>
+            <p class="date">Date: 25th March 2025</p>
+            <p>The final exams for the Data Science course will be held on March 25th. Please make sure to complete all assignments before the exam date.</p>
+        </div>
+
+        <!-- Notice 2 -->
+        <div class="notice-card">
+            <h3 class="important">Fee Payment Deadline</h3>
+            <p class="date">Date: 20th March 2025</p>
+            <p class="important">The last date for fee payment for the current semester is March 20th. Late payments will incur an additional fee.</p>
+        </div>
+
+        <!-- Notice 3 -->
+        <div class="notice-card">
+            <h3>Library Closed for Maintenance</h3>
+            <p class="date">Date: 18th March 2025</p>
+            <p>The library will remain closed from March 18th to March 20th due to maintenance work. Kindly plan accordingly.</p>
+        </div>
+
+        <!-- Important Notice -->
+        <div class="notice-card important-notice">
+            <h3>Course Registration Open</h3>
+            <p class="date">Date: 10th March 2025</p>
+            <p class="important">Registration for the new semester courses opens on March 10th. Please register early to avoid last-minute issues.</p>
+        </div>
+    </div>
+</body>
+</html>

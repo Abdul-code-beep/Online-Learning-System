@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="width: 30rem;">
+        <h2 class="text-center">Login</h2>
+
+        @using (Html.BeginForm())
+        {
+            <div class="mb-3">
+                <label class="form-label">Email:</label>
+                <input type="email" name="email" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password:</label>
+                <input type="password" name="password" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Role:</label>
+                <select name="role" class="form-select">
+                    <option value="Student">Student</option>
+                    <option value="Faculty">Faculty</option>
+                    <option value="Admin">Admin</option>
+                </select>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+
+            if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger text-center mt-3">
+                    @ViewBag.Error
+                </div>
+            }
+        }
+
+        <div class="text-center mt-3">
+            <p>Or login with</p>
+            <a href="#" class="btn btn-light border me-2">
+                <img src="https://img.icons8.com/color/20/000000/google-logo.png" alt="Google"> Google
+            </a>
+            <a href="#" class="btn btn-light border">
+                <img src="https://img.icons8.com/fluency/20/000000/facebook-new.png" alt="Facebook"> Facebook
+            </a>
+        </div>
+
+        <div class="text-center mt-3">
+            <p>Don't have an account? <a href="@Url.Action("Register", "Account")">Register here</a></p>
+        </div>
+    </div>
+</div>

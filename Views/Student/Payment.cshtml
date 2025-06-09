@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "Payment";
+}
+
+<h2>Payment</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment History - Student Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .payment-card {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .payment-info {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+            .payment-info h3 {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+
+            .payment-info p {
+                margin-bottom: 15px;
+            }
+
+            .payment-info .amount {
+                font-size: 1.2em;
+                font-weight: bold;
+                color: #4CAF50;
+            }
+
+            .payment-info .date {
+                font-size: 0.9em;
+                color: #777;
+            }
+
+        .payment-status {
+            font-weight: bold;
+            color: #FF5722;
+        }
+
+            .payment-status.paid {
+                color: #4CAF50;
+            }
+
+            .payment-status.pending {
+                color: #FF5722;
+            }
+
+            .payment-status.failed {
+                color: #f44336;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment History</h1>
+
+        <!-- Payment 1 -->
+        <div class="payment-card">
+            <div class="payment-info">
+                <h3>Advanced Web Development</h3>
+                <p class="date">Payment Date: 01 Jan 2025</p>
+                <p class="amount">₹6,500</p>
+                <p class="payment-status paid">Status: Paid</p>
+            </div>
+        </div>
+
+        <!-- Payment 2 -->
+        <div class="payment-card">
+            <div class="payment-info">
+                <h3>Data Science with Python</h3>
+                <p class="date">Payment Date: 05 Jan 2025</p>
+                <p class="amount">₹8,000</p>
+                <p class="payment-status pending">Status: Pending</p>
+            </div>
+        </div>
+
+        <!-- Payment 3 -->
+        <div class="payment-card">
+            <div class="payment-info">
+                <h3>Machine Learning Mastery</h3>
+                <p class="date">Payment Date: 10 Jan 2025</p>
+                <p class="amount">₹7,500</p>
+                <p class="payment-status failed">Status: Failed</p>
+            </div>
+        </div>
+
+        <!-- Payment 4 -->
+        <div class="payment-card">
+            <div class="payment-info">
+                <h3>Cloud Computing with AWS</h3>
+                <p class="date">Payment Date: 15 Jan 2025</p>
+                <p class="amount">₹9,000</p>
+                <p class="payment-status paid">Status: Paid</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

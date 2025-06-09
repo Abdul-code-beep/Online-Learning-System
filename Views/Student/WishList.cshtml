@@ -1,0 +1,157 @@
+﻿
+@{
+    ViewBag.Title = "WishList";
+}
+
+<h2>WishList</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .course-card {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .course-info {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+            .course-info h3 {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+
+            .course-info p {
+                margin-bottom: 15px;
+            }
+
+            .course-info .price {
+                font-size: 1.2em;
+                font-weight: bold;
+                color: #ff6f61;
+            }
+
+        .remove-btn {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+            .remove-btn:hover {
+                background-color: #ff5a4f;
+            }
+
+        .wishlist-empty {
+            text-align: center;
+            font-size: 1.2em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Wishlist</h1>
+
+        <!-- Course Card 1 -->
+        <div class="course-card">
+            <div class="course-info">
+                <h3>Advanced Web Development</h3>
+                <p>Master the skills of building responsive websites and web applications with HTML, CSS, JavaScript, and React.</p>
+                <p class="price">₹6,500</p>
+            </div>
+            <button class="remove-btn" onclick="removeFromWishlist('Advanced Web Development')">Remove</button>
+        </div>
+
+        <!-- Course Card 2 -->
+        <div class="course-card">
+            <div class="course-info">
+                <h3>Data Science with Python</h3>
+                <p>Learn Python for data analysis, machine learning, and deep learning using real-world data sets and applications.</p>
+                <p class="price">₹8,000</p>
+            </div>
+            <button class="remove-btn" onclick="removeFromWishlist('Data Science with Python')">Remove</button>
+        </div>
+
+        <!-- Course Card 3 -->
+        <div class="course-card">
+            <div class="course-info">
+                <h3>Machine Learning Mastery</h3>
+                <p>Understand and apply machine learning algorithms with hands-on projects, using tools like scikit-learn and TensorFlow.</p>
+                <p class="price">₹7,500</p>
+            </div>
+            <button class="remove-btn" onclick="removeFromWishlist('Machine Learning Mastery')">Remove</button>
+        </div>
+
+        <!-- Course Card 4 -->
+        <div class="course-card">
+            <div class="course-info">
+                <h3>Cloud Computing with AWS</h3>
+                <p>Explore cloud computing concepts with AWS, including EC2, S3, Lambda, and more to build scalable applications.</p>
+                <p class="price">₹9,000</p>
+            </div>
+            <button class="remove-btn" onclick="removeFromWishlist('Cloud Computing with AWS')">Remove</button>
+        </div>
+
+        <!-- Empty Wishlist Message -->
+        <div id="wishlist-empty" class="wishlist-empty" style="display: none;">
+            <p>Your wishlist is empty.</p>
+        </div>
+    </div>
+
+    <script>
+        function removeFromWishlist(courseName) {
+            // Remove the course from the page (you could also add backend logic here)
+            const courseCard = event.target.closest('.course-card');
+            courseCard.style.display = 'none';
+
+            // Check if wishlist is empty and show a message
+            const remainingCourses = document.querySelectorAll('.course-card');
+            if (remainingCourses.length === 0) {
+                document.getElementById('wishlist-empty').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

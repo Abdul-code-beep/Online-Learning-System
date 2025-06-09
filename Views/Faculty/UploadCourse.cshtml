@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewBag.Title = "UploadCourse";
+}
+
+<style>
+   /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Heading Styles */
+h1 {
+    color: #333;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Form Container */
+form {
+    background: white;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Input Field Focus Effect */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Label Styling */
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+media (max-width: 480px) {
+    form {
+        width: 90%;
+    }
+
+    input {
+        width: 95%;
+    }
+}
+
+
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Faculty Dashboard</title>
+    <script>
+        function saveCourseDetails() {
+            const courseName = document.getElementById("courseName").value;
+            const fees = document.getElementById("fees").value;
+            const duration = document.getElementById("duration").value;
+            const date = document.getElementById("date").value;
+            const facultyName = document.getElementById("facultyName").value;
+
+            const courseDetails = {
+                courseName: courseName,
+                fees: fees,
+                duration: duration,
+                date: date,
+                facultyName: facultyName
+            };
+
+            // Store in local storage (convert object to JSON string)
+            localStorage.setItem("courseDetails", JSON.stringify(courseDetails));
+
+            alert("Course details saved!"); // Or a more user-friendly message
+        }
+    </script>
+</head>
+<body>
+    <h1>Upload Course Details</h1>
+    <form>
+        Course Name: <input type="text" id="courseName"><br>
+        Fees: <input type="number" id="fees"><br>
+        Duration: <input type="text" id="duration"><br>
+        Course beginning  Date: <input type="date" id="date"><br>
+        Faculty Name: <input type="text" id="facultyName"><br>
+        <button type="button" onclick="saveCourseDetails()">Upload Details</button>
+    </form>
+</body>
+</html>

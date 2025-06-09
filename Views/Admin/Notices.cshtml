@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Notices";
+}
+
+<h2>Notices</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notices</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .notice {
+            background-color: #e9f7ef;
+            border-left: 5px solid #27ae60;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+            .notice h3 {
+                margin: 0;
+                color: #2c3e50;
+            }
+
+            .notice p {
+                margin-top: 10px;
+                color: #7f8c8d;
+            }
+
+        .date {
+            text-align: right;
+            font-size: 14px;
+            color: #95a5a6;
+        }
+
+        .important {
+            background-color: #fef9e4;
+            border-left: 5px solid #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Notices</h1>
+
+        <div class="notice important">
+            <h3>Important: Upcoming Exam Schedule</h3>
+            <p>The final exams for the semester are scheduled to begin on March 10th, 2025. Please check the exam timetable for your respective subjects on the notice board.</p>
+            <div class="date">Date: 2025-02-28</div>
+        </div>
+
+        <div class="notice">
+            <h3>Notice: Online Class Reschedule</h3>
+            <p>Due to unforeseen circumstances, the online class for the "Machine Learning 101" course will be rescheduled to March 2nd, 2025, at 4:00 PM.</p>
+            <div class="date">Date: 2025-02-27</div>
+        </div>
+
+        <div class="notice">
+            <h3>Notice: Library Closure</h3>
+            <p>The college library will remain closed on March 3rd, 2025, for maintenance. Please plan your visits accordingly.</p>
+            <div class="date">Date: 2025-02-25</div>
+        </div>
+
+        <div class="notice">
+            <h3>Notice: Workshop on Data Science</h3>
+            <p>A workshop on Data Science will be held on March 5th, 2025. All interested students are requested to register before March 3rd, 2025.</p>
+            <div class="date">Date: 2025-02-22</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "Feedback";
+}
+
+<h2>Feedback</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 40px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        input, textarea, select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .rating {
+            display: flex;
+            gap: 10px;
+        }
+
+            .rating input {
+                width: 20px;
+            }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #2ecc71;
+            }
+
+        .thank-you-message {
+            display: none;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Feedback</h1>
+        <form id="feedback-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="rating">Rating:</label>
+            <div class="rating">
+                <label for="rating">Rate your experience:</label>
+                <input type="radio" id="1" name="rating" value="1" required> 1
+                <input type="radio" id="2" name="rating" value="2"> 2
+                <input type="radio" id="3" name="rating" value="3"> 3
+                <input type="radio" id="4" name="rating" value="4"> 4
+                <input type="radio" id="5" name="rating" value="5"> 5
+            </div>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="5" placeholder="Write your feedback here..." required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <div class="thank-you-message" id="thank-you-message">
+            Thank you for your feedback! We appreciate your time and effort.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Display thank you message after form submission
+            document.getElementById('thank-you-message').style.display = 'block';
+            document.getElementById('feedback-form').reset();
+        });
+    </script>
+</body>
+</html>
