@@ -30,4 +30,36 @@ An Online Video Learning Platform developed using **ASP.NET Framework (C#)**, **
 ## 📁 Folder & File Structure
 
 > Only important files and folders are uploaded. Auto-generated and heavy folders like `bin/`, `obj/`, `.vs/`, and `packages/` are excluded.
+>
+> OnlineVideoLearningSystem/
+├── App_Data/
+├── App_Start/
+├── Content/
+├── Controllers/
+├── Migrations/
+├── Models/
+├── Properties/
+├── Scripts/
+├── Views/
+├── Global.asax
+├── Global.asax.cs
+├── Web.config
+├── Web.Debug.config
+├── Web.Release.config
+├── Online learning System.sln
+├── Online learning System.csproj
+├── packages.config
+
+
+
+## 📥 How to Download and Run This Project
+
+### ✅ Prerequisites
+
+- Visual Studio (2019 or 2022 Community Edition)
+- MySQL Server & MySQL Workbench
+- .NET Framework (matching the one in your project)
+- Internet (for NuGet package restore)
+
+---
 
